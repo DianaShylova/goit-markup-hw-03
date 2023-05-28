@@ -51,15 +51,28 @@ body{
 .section{
     padding-top: 120px;
     padding-bottom: 120px;
-    padding-left: auto;
-    padding-right: auto;
+   
 }
+
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+  }
+
+  
 /* ============<!-- COMPONENTS -->====== */
 .suptitle{
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11; 
     letter-spacing: 0.02em;
+    margin-bottom: 72px;
     text-align: center;
     text-transform: capitalize;
     color: var(--brand-color);
@@ -68,7 +81,8 @@ body{
 .description{
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: var(--content-txt-color); 
+    color: var(--content-txt-color);
+    text-align: center; 
 }
 
 .item-name{
@@ -77,6 +91,8 @@ body{
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--brand-color);
+    margin-bottom: 8px;
+    text-align: center;
 }
 
 .logo{
@@ -87,6 +103,7 @@ body{
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--brand-bright-color);
+    margin-right: 76px;
 }
 
 .color-logo-part{
@@ -108,7 +125,7 @@ body{
 
 .site-nav{
     display: flex;
-    margin-left: 76px;
+    align-items: center;    
 }
 .site-nav .menu-item:not(:last-child){
     margin-right: 40px;
@@ -116,6 +133,7 @@ body{
 
 
 .menu-link{
+    padding: 24px 0;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -135,8 +153,11 @@ body{
     display: flex;
     
 }
-.contacts-nav .tel +.tel{
-    margin-left: 40px;
+.contacts-nav .tel{
+    margin-right: 40px;
+}
+.contacts-nav:last-child{
+    margin-right: 0px;
 }
 .tel{    
     font-weight: 400;
@@ -149,10 +170,6 @@ body{
     color: var(--focus-btn-color)
 }
 
- .main-nav{
-    display: flex;
-    align-items: center;
- }
 /* ============<!-- /HEADER -->====== */
 
 /* ============<!-- HERO -->====== */
@@ -160,8 +177,8 @@ body{
     background-color: var(--brand-color);
     padding-top: 188px;
     padding-bottom: 188px;
-    padding-left: auto;
-    padding-right: auto; 
+    padding-left: 0;
+    padding-right: 0; 
     
 }
 .hero-content{
@@ -173,19 +190,23 @@ body{
     font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
-    width: 496px;
+    max-width: 496px;
     color:var(--body-color);
     text-align: center;
     letter-spacing: 0.02em;
 }
 
 .modal-btn{
+    display: block;
+    min-width: 169px;
+    height: 56px;
     font-family: var(--main-font);
     font-weight: 500;
     line-height: 1.5;
     font-size: 16px;
     color: #FFFFFF;
     letter-spacing: 0.04em;
+    border: none;
     background: var(--brand-bright-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -208,22 +229,22 @@ body{
     border-radius: 0px 0px 4px 4px;
 }
 .card-content{
+    padding-top: 32px;
+    padding-bottom: 32px;
     padding-left: 16px;
     padding-right: 16px;
 }
-.card-content-centered{
-    text-align: center;
+.card-content-nocentered{
+    text-align: left;
 }
 /* ============<!-- TEAM -->====== */
 .team{
     background-color: var(--light-bg);
     margin-left: auto;
     margin-right: auto;
-    padding-top: 120px;
-    padding-bottom: 120px;
 }
 .team-flex-element{
-    width: 264px;
+    width: 264px ; /*calc((100%-72px)/4);*/
     margin-right: 24px;
     margin-bottom: 0;
 }
@@ -237,6 +258,7 @@ body{
 .filter-flex-container{
     display: flex;
     justify-content: center;
+    margin-top: 96px;
     margin-bottom: 72px;
 }
 .filter-btn{
@@ -267,6 +289,8 @@ body{
     width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
 }
@@ -275,7 +299,7 @@ body{
     flex-wrap: wrap;
 }
 .product-flex-element{
-    width: 360px;
+    width: calc((100% - 48px) / 3);
     border: 1px solid #E7E9FC;
     margin-right: 24px;
     margin-bottom: 48px;
@@ -296,12 +320,16 @@ body{
     padding-bottom: 100px;
 }
 .logo-footer{
-    color: var(--light-bg);
+    display: inline-block;
+    margin-bottom: 16px;
+}
+.logo-footer-color{
+    color: var(--light-bg);    
 }
 .txt-footer{
     line-height: 1.5;
     letter-spacing: 0.02em;
-    width: 264px;
+    max-width: 264px;
 }
 /* ============<!-- /FOOTER -->====== */
 
