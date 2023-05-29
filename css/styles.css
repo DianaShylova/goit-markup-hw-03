@@ -57,7 +57,7 @@ body{
    
 }
 
-.visually-hidden {
+.visually-hidden{
     position: absolute !important;
     clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
     clip: rect(1px, 1px, 1px, 1px);
@@ -73,10 +73,7 @@ body{
     width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 .suptitle{
     font-weight: 700;
@@ -129,7 +126,7 @@ body{
 .page-header{
     padding-top: 24px;
     padding-bottom: 24px;
-    width: 1128px;
+    /*width: 1128px;*/
     margin-left: auto;
     margin-right: auto;
     border-bottom: 1px solid #E7E9FC;
@@ -142,7 +139,9 @@ body{
 .site-nav .menu-item:not(:last-child){
     margin-right: 40px;
 }
-
+.site-nav .menu-item:last-child{
+    margin-right: 0;
+}
 
 .menu-link{
     padding: 24px 0;
@@ -165,10 +164,10 @@ body{
     display: flex;
     
 }
-.contacts-nav .tel{
+.contacts-nav .contact-item:not(:last-child){
     margin-right: 40px;
 }
-.contacts-nav:last-child{
+.contacts-nav .contact-item:last-child{
     margin-right: 0px;
 }
 .tel{    
@@ -250,6 +249,7 @@ body{
     padding-bottom: 32px;
     padding-left: 16px;
     padding-right: 16px;
+
 }
 .card-content-nocentered{
     text-align: left;
@@ -283,7 +283,11 @@ body{
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.04em;  
+    letter-spacing: 0.04em;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 24px;
+    padding-right: 24px; 
     color: var(--brand-bright-color);
     background: var(--light-bg);
     border: 1px solid #E7E9FC;
@@ -293,6 +297,7 @@ body{
 
 .filter-btn:hover,
 .filter-btn:focus{
+    border: 1px solid transparent;
     color: #FFFFFF;
     background: var(--focus-btn-color);
 }
@@ -328,6 +333,11 @@ body{
 }
 .product-flex-element:nth-last-child(-n+3){
     margin-bottom: 0;
+}
+
+.product-card-content{
+    border: 1px solid #e7e9fc;
+    border-top: none; 
 }
 /* ============<!-- /PRODUCTS -->====== */
 
